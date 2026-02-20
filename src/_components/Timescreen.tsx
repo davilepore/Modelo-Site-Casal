@@ -1,8 +1,23 @@
+import { Heart } from "lucide-react";
 import Countdown from "./_ui/Countdown";
 
 function Timescreen() {
   return (
-    <div>
+    <div className="min-h-screen flex items-center flex-col space-y-20 pt-30">
+      <div className="flex justify-between w-[80%] h-10">
+        <Heart
+          size={50}
+          fill="pink"
+          stroke="pink"
+          className="rotate-[-25deg]"
+        />
+        <Heart size={50} fill="pink" stroke="pink" />
+        <Heart size={50} fill="pink" stroke="pink" className="rotate-25" />
+      </div>
+      <div className=" text-4xl">
+        <h2>Para minha</h2>
+        <h2>Princesinha</h2>
+      </div>
       <Countdown />
     </div>
   );
