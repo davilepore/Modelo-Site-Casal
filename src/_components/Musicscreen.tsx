@@ -2,7 +2,7 @@ import { Heart } from "lucide-react";
 
 function Musicscreen() {
   return (
-    <div className="flex items-center justify-center flex-col gap-3">
+    <div className="flex items-center justify-center flex-col gap-3 shadow-[0_0_40px_rgba(255,20,147,0.8)] max-w-[80%] mx-auto">
       <h2 className="flex gap-2">
         <Heart />
         Nossa Música

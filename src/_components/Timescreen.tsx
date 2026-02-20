@@ -7,12 +7,21 @@ function Timescreen() {
       <div className="flex justify-between w-[80%] h-10">
         <Heart
           size={50}
-          fill="pink"
-          stroke="pink"
+          fill="rgba(255,20,147,0.9)"
+          stroke="rgba(255,20,147,0.9)"
           className="rotate-[-25deg]"
         />
-        <Heart size={50} fill="pink" stroke="pink" />
-        <Heart size={50} fill="pink" stroke="pink" className="rotate-25" />
+        <Heart
+          size={50}
+          fill="rgba(255,20,147,0.9)"
+          stroke="rgba(255,20,147,0.9)"
+        />
+        <Heart
+          size={50}
+          fill="rgba(255,20,147,0.9)"
+          stroke="rgba(255,20,147,0.9)"
+          className="rotate-25"
+        />
       </div>
       <div className=" text-4xl">
         <h2>Para minha</h2>
