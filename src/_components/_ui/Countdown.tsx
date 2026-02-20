@@ -2,6 +2,7 @@
 
 import { Calendar } from "lucide-react";
 import { useEffect, useState } from "react";
+import CountUp from "./CountUp";
 
 type Tempo = {
   years: number;
@@ -10,6 +11,7 @@ type Tempo = {
   hours: number;
   minutes: number;
   seconds: number;
+  totaldays: number;
 };
 
 export default function Countdown() {
@@ -20,6 +22,7 @@ export default function Countdown() {
     hours: 0,
     minutes: 0,
     seconds: 0,
+    totaldays: 0,
   });
 
   useEffect(() => {
@@ -27,6 +30,9 @@ export default function Countdown() {
 
     const interval = setInterval(() => {
       const agora = new Date();
+
+      const diff = agora.getTime() - dataInicial.getTime();
+      const totaldays = Math.floor(diff / (1000 * 60 * 60 * 24));
 
       let years = agora.getFullYear() - dataInicial.getFullYear();
       let months = agora.getMonth() - dataInicial.getMonth();
@@ -71,14 +77,14 @@ export default function Countdown() {
         years--;
       }
 
-      setTempo({ years, months, days, hours, minutes, seconds });
+      setTempo({ years, months, days, hours, minutes, seconds, totaldays });
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-10">
       <h1 className="flex justify-center gap-2">
         <Calendar />
         Juntos desde: 03/09/2024
@@ -100,6 +106,18 @@ export default function Countdown() {
           <h2>{tempo.minutes}:</h2>
           <h2>{tempo.seconds}</h2>
         </div>
+        <h2>
+          <span>São </span>
+          <CountUp
+            from={0}
+            to={tempo.totaldays}
+            separator=","
+            direction="up"
+            duration={1}
+            className="count-up-text"
+          />{" "}
+          dias te amando
+        </h2>
       </div>
     </div>
   );
