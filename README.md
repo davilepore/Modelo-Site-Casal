@@ -1,8 +1,9 @@
-💖 #Website de Casal
+
+💖 Website de Casal
 
 Este é um projeto de Site de Casal moderno e responsivo, desenvolvido para celebrar histórias de amor. Ele centraliza memórias, marcos temporais e a trilha sonora do relacionamento em uma experiência digital única.
 
-✨ #Funcionalidades
+✨ Funcionalidades
 
 O site foi estruturado em seções estratégicas para contar uma história:
 
@@ -14,7 +15,7 @@ Nossos Momentos: Uma galeria de fotos interativa com momentos marcantes e legend
 
 Nossa Música: Integração (ou player customizado) com a música tema do casal, criando uma imersão sonora.
 
-🛠️ #Tecnologias Utilizadas
+🛠️ Tecnologias Utilizadas
 
 Para garantir performance, SEO e uma estilização elegante, foram utilizadas as seguintes ferramentas:
 
@@ -30,7 +31,7 @@ Lucide React (Ícones minimalistas)
 
 Framer Motion (Para animações suaves e transições de página)
 
-🚀 #Como Executar o Projeto
+🚀 Como Executar o Projeto
 
 Clone o repositório:
 
