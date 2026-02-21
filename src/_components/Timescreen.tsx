@@ -23,7 +23,7 @@ function Timescreen() {
           className="rotate-25"
         />
       </div>
-      <div className=" text-4xl">
+      <div className="text-white space-y-3 text-4xl">
         <h2>Para minha</h2>
         <h2>Princesinha</h2>
       </div>
