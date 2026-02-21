@@ -7,10 +7,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Tempo Juntos", href: "#timeScreen", current: true },
+  { name: "Para você", href: "#forYou", current: false },
+  { name: "Nossos Momentos", href: "#moments", current: false },
+  { name: "Nossa Música", href: "#music", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="relative bg-black/30 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10"
+      className="relative bg-black/10 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10"
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
@@ -42,7 +42,7 @@ export default function Navbar() {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <h2 className="text-white">Davi e Rebeca</h2>
+              <h2 className="text-white">Texto</h2>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">

@@ -85,26 +85,82 @@ export default function Countdown() {
 
   return (
     <div className="space-y-10 text-[#f3e8ff] text-2xl">
-      <h1 className="flex justify-center gap-2">
+      <h1 className="flex justify-center gap-3 items-center">
         <Calendar />
         Juntos desde: 03/09/2024
       </h1>
       <div className="flex flex-col gap-10 justify-center items-center">
         <div className="flex gap-4 items-center justify-center">
-          <h2 className="flex flex-col border-2 border-[#ff1493]  p-2 rounded-lg text-center shadow-[0_0_15px_rgba(255,20,147,0.8)]">
-            {tempo.years} <span>anos</span>
+          <h2 className="flex flex-col border-2 border-[#ff1493] p-3 rounded-lg text-center shadow-[0_0_15px_rgba(255,20,147,0.8)]">
+            <CountUp
+              from={0}
+              to={tempo.years}
+              separator=","
+              direction="up"
+              duration={1}
+              className="count-up-text"
+            />
+            <span>anos</span>
           </h2>
-          <h2 className="flex flex-col border-2 border-[#ff1493]  p-2 rounded-lg text-center shadow-[0_0_15px_rgba(255,20,147,0.8)]">
-            {tempo.months} <span>meses</span>
+          <h2 className="flex flex-col border-2 border-[#ff1493] p-3 rounded-lg text-center shadow-[0_0_15px_rgba(255,20,147,0.8)]">
+            <CountUp
+              from={0}
+              to={tempo.months}
+              separator=","
+              direction="up"
+              duration={1}
+              className="count-up-text"
+            />{" "}
+            <span>meses</span>
           </h2>
-          <h2 className="flex flex-col border-2 border-[#ff1493]  p-2 rounded-lg text-center shadow-[0_0_15px_rgba(255,20,147,0.8)]">
-            {tempo.days} <span>dias</span>
+          <h2 className="flex flex-col border-2 border-[#ff1493] p-3 rounded-lg text-center shadow-[0_0_15px_rgba(255,20,147,0.8)]">
+            <CountUp
+              from={0}
+              to={tempo.days}
+              separator=","
+              direction="up"
+              duration={1}
+              className="count-up-text"
+            />{" "}
+            <span>dias</span>
           </h2>
         </div>
         <div className="flex justify-center border-2 border-[#ff1493] shadow-[0_0_15px_rgba(255,20,147,0.8)] rounded-xl p-2 w-[40%]">
-          <h2>{tempo.hours}:</h2>
-          <h2>{tempo.minutes}:</h2>
-          <h2>{tempo.seconds}</h2>
+          <h2>
+            {" "}
+            <CountUp
+              from={0}
+              to={tempo.hours}
+              separator=","
+              direction="up"
+              duration={1}
+              className="count-up-text"
+            />
+            :
+          </h2>
+          <h2>
+            {" "}
+            <CountUp
+              from={0}
+              to={tempo.minutes}
+              separator=","
+              direction="up"
+              duration={1}
+              className="count-up-text"
+            />
+            :
+          </h2>
+          <h2>
+            {" "}
+            <CountUp
+              from={0}
+              to={tempo.seconds}
+              separator=","
+              direction="up"
+              duration={1}
+              className="count-up-text"
+            />
+          </h2>
         </div>
         <h2>
           <span>São </span>
